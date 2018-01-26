@@ -1,0 +1,104 @@
+@while $i > 0 {}
+@while $i>0{}
+@while  $i  >  0  {}
+@while $i
+    >
+    0
+    {}
+@while
+    $i
+    >
+    0
+    {}
+@while
+$i
+>
+0
+{
+}
+@while
+
+$i
+
+>
+
+0
+
+{
+
+}
+@while ($i > 0) {}
+@while ($i>0){}
+@while ( $i > 0 ) {}
+@while  (  $i  >  0  )  {}
+@while (
+    $i > 0
+) {}
+@while
+    ($i > 0) {}
+@while
+(
+$i
+>
+0
+)
+{
+}
+@while
+
+(
+
+$i
+
+>
+
+0
+
+)
+
+{
+
+}
+@while $very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-vey-long-var > $other-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-vey-long-var {}
+@while (($i) > (0)) {}
+@while (($i)>(0)){}
+@while  (  (  $i  )  >  (  0  )  )  {}
+@while (($i)
+    >
+    (0)
+) {}
+@while
+(
+(
+$i
+)
+>
+(
+0
+)
+)
+{
+}
+@while
+
+(
+
+(
+
+$i
+
+)
+
+>
+
+(
+
+0
+
+)
+
+)
+
+{
+
+}

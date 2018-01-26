@@ -119,6 +119,21 @@ function genericPrint(path, options, print) {
         hasParams &&
         n.params.type === "media-query-list" &&
         /^\(\s*\)$/.test(n.params.value);
+      const hasIndent = !(
+        n.name === "for" ||
+        n.name === "each" ||
+        n.name === "while" ||
+        n.name === "debug" ||
+        n.name === "mixin" ||
+        n.name === "include" ||
+        n.name === "function"
+      );
+      let printedValue = concat([" ", path.call(print, "value")]);
+
+      if (hasIndent) {
+        printedValue = indent(printedValue);
+      }
+
       return concat([
         "@",
         // If a Less file ends up being parsed with the SCSS parser, Less
@@ -133,6 +148,8 @@ function genericPrint(path, options, print) {
               path.call(print, "params")
             ])
           : "",
+        n.selector ? indent(concat([" ", path.call(print, "selector")])) : "",
+        n.value ? printedValue : "",
         n.nodes
           ? concat([
               " {",
@@ -315,8 +332,10 @@ function genericPrint(path, options, print) {
         declParent = path.getParentNode(i++);
       } while (declParent && declParent.type !== "css-decl");
 
-      const declParentProp = declParent.prop.toLowerCase();
+      const declParentProp =
+        declParent && declParent.prop && declParent.prop.toLowerCase();
       const isGridValue =
+        declParentProp &&
         parent.type === "value-value" &&
         (declParentProp === "grid" ||
           declParentProp.startsWith("grid-template"));

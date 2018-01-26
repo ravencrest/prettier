@@ -5,3 +5,125 @@
 } @else if $media == tabletPortrait {
     $k: .065106;
 }
+p {
+    @if $type == ocean {}
+    @if $type==ocean{}
+    @if  $type  ==  ocean  {}
+    @if $type
+        == ocean {}
+    @if
+    $type
+    ==
+    ocean
+    {
+    }
+    @if
+
+    $type
+
+    ==
+
+    ocean
+
+    {
+
+    }
+    @if (($type) == (ocean)) {}
+    @if (($type)==(ocean)){}
+    @if  (  (  $type  )  ==  (  ocean  )  )  {}
+    @if (($type)
+        == (ocean)) {}
+    @if
+    (
+    (
+    $type
+    )
+    ==
+    (
+    ocean
+    )
+    )
+    {
+    }
+    @if
+
+    (
+
+    (
+
+    $type
+
+    )
+
+    ==
+
+    (
+
+    ocean
+
+    )
+
+    )
+
+    {
+
+    }
+    @if $type == ocean {
+        color: blue;
+    } @else if $type == matador {
+        color: red;
+    } @else if $type == monster {
+        color: green;
+    } @else {
+        color: black;
+    }
+    @if $type == ocean {
+    } @else if $type == matador {
+    }
+    @if $type==ocean{}@else if $type==matador{}
+    @if  $type  ==  ocean  {  }  @else  if  $type  ==  matador  {  }
+    @if $type == ocean {}
+    @else if $type == matador {}
+    @if
+        $type == ocean {}
+    @else if
+        $type == matador {}
+    @if
+        $type
+        ==
+        ocean
+        {
+        }
+    @else
+        if
+        $type
+        ==
+        matador
+        {
+        }
+    @if
+
+        $type
+
+        ==
+
+        ocean
+
+        {
+
+        }
+
+    @else
+
+        if
+
+        $type
+
+        ==
+
+        matador
+
+        {
+
+        }
+}
